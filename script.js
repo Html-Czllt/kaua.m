@@ -19,3 +19,15 @@ window.onscroll = function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+document.getElementById('playButton').addEventListener('click', function() {
+    const audio = document.getElementById('audioPlayer');
+    if (audio.paused) {
+        audio.play();
+        this.textContent = '⏸️ Pausar Áudio'; // Muda o texto para "Pausar"
+    } else {
+        audio.pause();
+        this.textContent = '🔊 Reproduzir Áudio'; // Muda o texto para "Reproduzir"
+    }
+});
+
