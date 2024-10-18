@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box; /* Para incluir padding e border nas dimensões */
     margin: 0; /* Remove margens padrão */
@@ -182,4 +183,21 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%; /* Faz o rodapé ocupar toda a largura */
+}
+
+
+.audio-button {
+    background-color: #444; /* Fundo cinza escuro */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Efeito de transição */
+    margin-bottom: 15px; /* Espaço abaixo do botão */
+}
+
+.audio-button:hover {
+    background-color: #555; /* Fundo mais claro ao passar o mouse */
 }
