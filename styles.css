@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box; /* Para incluir padding e border nas dimensões */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+}
+
+html, body {
+    height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    display: flex;
+    flex-direction: column;
+}
+
+main p {
+    margin-top: 1%;
+    max-width: 900px;
+}
+
+header {
+    background-color: #F0F0F0; /* Cinza muito claro para o cabeçalho */
+    padding: 10px 20px;
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+nav {
+    position: relative; /* Para posicionar o dropdown corretamente */
+}
+
+.dropdown {
+    display: inline-block; /* Permite que o dropdown se alinhe corretamente */
+}
+
+.dropbtn {
+    max-width: 120px;
+    padding: 10px 20px; /* Aumenta o espaçamento do botão */
+    border: none;
+    border-radius: 5px;
+    background-color: #E0E0E0; /* Cor do botão */
+    color: #333; /* Cor do texto */
+    cursor: pointer;
+    margin-right: 20px; /* Aumenta o afastamento do botão em relação à borda direita */
+}
+
+.dropdown-content {
+    position: absolute; /* Posiciona o dropdown em relação ao botão */
+    background-color: #FFFFFF; /* Cor de fundo do dropdown */
+    min-width: 120px; /* Largura mínima do dropdown */
+    max-width: 120px; /* Define uma largura máxima menor para o dropdown */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para que o centro fique no botão */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o dropdown */
+    z-index: 1; /* Para garantir que fique acima de outros elementos */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Inicialmente invisível */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transição suave */
+}
+
+.dropdown-content a {
+    color: #333; /* Cor do texto do menu */
+    padding: 8px; /* Ajusta o espaçamento interno dos itens do menu */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Exibe como bloco */
+    text-align: center; /* Centraliza o texto */
+}
+
+.dropdown-content a:hover {
+    background-color: #F0F0F0; /* Cor ao passar o mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Permite que fique visível */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+}
+
+.secao {
+    height: 100vh; /* Cada seção ocupa 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto da seção */
+    padding: 20px;
+}
+
+#secao1 {
+    background-color: #F9F9F9; /* Branco sujo para a primeira seção */
+}
+
+#secao2 {
+    background-color: #FFFFFF; /* Branco puro para a segunda seção */
+}
+
+.foto-container {
+    display: flex; /* Exibe as fotos em linha */
+    justify-content: center; /* Centraliza as fotos horizontalmente */
+    gap: 20px; /* Aumenta o espaço entre as fotos */
+    margin: 20px 0; /* Margem acima e abaixo do espaço das fotos */
+    flex-wrap: wrap; /* Permite que as fotos quebrem para a linha de baixo se necessário */
+}
+
+.foto-item {
+    display: flex;
+    flex-direction: column; /* Coloca a foto e a descrição em coluna */
+    align-items: center; /* Centraliza a foto e a descrição */
+}
+
+.foto {
+    width: 300px; /* Ajusta a largura de cada foto */
+    height: 300px; /* Ajusta a altura de cada foto */
+    background-size: cover; /* Cobre todo o espaço do contêiner */
+    background-position: center; /* Centraliza a imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição do efeito */
+}
+
+.foto:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.descricao {
+    margin-top: 5px; /* Margem acima da descrição */
+    padding: 5px 10px; /* Espaçamento interno */
+    background-color: #FFFFFF; /* Fundo branco da descrição */
+    border-radius: 5px; /* Bordas arredondadas para a descrição */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centraliza o texto da descrição */
+    max-width: 300px; /* Limita a largura da descrição */
+}
+
+.galeria-container {
+    display: flex; /* Flex para linha */
+    flex-direction: column; /* Organiza as linhas verticalmente */
+    gap: 20px; /* Espaço entre linhas */
+    margin: 20px 0; /* Margem acima e abaixo do espaço das fotos */
+}
+
+.linha {
+    display: flex; /* Exibe as fotos em linha */
+    justify-content: center; /* Centraliza as fotos horizontalmente */
+    gap: 20px; /* Aumenta o espaço entre as fotos */
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    left: 20px; /* Distância da esquerda */
+    display: none; /* Inicialmente escondido */
+    padding: 10px 15px;
+    background-color: #E0E0E0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #D0D0D0; /* Muda a cor ao passar o mouse */
+}
+
+
+footer {
+    background-color: #F0F0F0; /* Mesma cor do cabeçalho */
+    color: #333; /* Texto do rodapé escuro */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Faz o rodapé ocupar toda a largura */
+}
